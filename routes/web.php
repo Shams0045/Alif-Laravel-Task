@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
+
+Route::resource('/contacts', ContactController::class);
+
+//Route::get('/search', 'App\Http\Controllers\ContactController@search');
+
+//Route::resource('contact', 'App\Http\Controllers\ContactController');
+
+ 
